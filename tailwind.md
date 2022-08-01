@@ -37,7 +37,7 @@
         adicionar no theme.extend:
         fontFamily: { Inter: ['Inter'], },
 
-### Usar dark mode manual com Tailwind CSS
+### Usar dark mode manual com Tailwind CSS, obs: Tailwind tem suporte automático a temas
 
 - No arquivo tailwind.config.js
 
