@@ -4,7 +4,7 @@
 
 - No terminal :
 
-        yarn add -D tailwindcss postcss autoprefixer
+        npm install -D tailwindcss postcss autoprefixer
 
         npx tailwindcss init -p
 
@@ -22,12 +22,12 @@
 
         importar o arquivo global.css
 
-### Usar font externa do Google fonts (Exemplo Font Inter)
+### Usar font externa do Google fonts (Exemplo Font Lato)
 
 - No arquivo global.css
 
         adicionar no começo:
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lato:ital,wght@0,400;0,700;1,400&family=Rubik+Beastly&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
 
         adicionar ao body:
         @apply font-Inter
