@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export function Header() {
   const isAuthenticated = true;
@@ -6,7 +6,7 @@ export function Header() {
   return (
     <header className="relative h-16 z-10 flex items-center justify-between bg-zinc-100 dark:bg-zinc-900">
       <div className="ml-4">
-        <Link className="font-bold text-xl text-blue-500" to={"/"}>
+        <Link className="font-bold text-xl text-blue-500" to={'/'}>
           Login Social
         </Link>
       </div>
@@ -17,7 +17,7 @@ export function Header() {
               <li>
                 <Link
                   className="text-lg text-zinc-800 dark:text-zinc-200 hover:text-blue-500"
-                  to={"/profile"}
+                  to={'/profile'}
                 >
                   Profile
                 </Link>
@@ -33,7 +33,7 @@ export function Header() {
               <li>
                 <Link
                   className="text-lg text-zinc-800 dark:text-zinc-200 hover:text-blue-500"
-                  to={"/login"}
+                  to={'/login'}
                 >
                   Login
                 </Link>
