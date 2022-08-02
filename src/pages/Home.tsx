@@ -2,11 +2,11 @@ export function Home() {
   return (
     <div className="flex flex-col w-full min-h-[calc(100vh_-_64px_-_32px)] justify-center gap-8">
       <div className="flex flex-col gap-2 px-8">
-        <h2 className="font-Capriola font-bold text-xl text-zinc-800 dark:text-zinc-200">
-          Spring Boot React
-        </h2>
-        <h2 className="font-Capriola font-bold text-xl text-zinc-800 dark:text-zinc-200">
+        <h2 className="font-Capriola font-bold text-2xl text-zinc-800 dark:text-zinc-200">
           OAuth2 Social Login
+        </h2>
+        <h2 className="font-Capriola font-bold text-lg text-zinc-800 dark:text-zinc-200">
+          with Java Spring & React JS
         </h2>
       </div>
       <div className="flex px-8 gap-2">
