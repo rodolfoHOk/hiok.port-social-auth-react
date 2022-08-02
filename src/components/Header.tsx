@@ -19,14 +19,14 @@ export function Header() {
             <ul className="flex gap-4">
               <li>
                 <Link
-                  className="text-lg text-zinc-700 dark:text-zinc-300 hover:text-blue-500"
+                  className="text-lg text-zinc-700 dark:text-zinc-300 hover:text-blue-500 transition-colors duration-200"
                   to={'/profile'}
                 >
                   Profile
                 </Link>
               </li>
               <li>
-                <a className="text-lg text-zinc-700 dark:text-zinc-300 hover:text-blue-500">
+                <a className="text-lg text-zinc-700 dark:text-zinc-300 hover:text-blue-500 transition-colors duration-200">
                   Logout
                 </a>
               </li>
@@ -35,7 +35,7 @@ export function Header() {
             <ul className="flex gap-4">
               <li>
                 <Link
-                  className="text-lg text-zinc-700 dark:text-zinc-300 hover:text-blue-500"
+                  className="text-lg text-zinc-700 dark:text-zinc-300 hover:text-blue-500 transition-colors duration-200"
                   to={'/login'}
                 >
                   Login
