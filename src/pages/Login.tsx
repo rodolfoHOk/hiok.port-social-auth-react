@@ -2,6 +2,11 @@ import { Home } from './Home';
 import facebookLogo from '../assets/images/facebook-logo.png';
 import githubLogo from '../assets/images/github-logo.png';
 import googleLogo from '../assets/images/google-logo.png';
+import {
+  FACEBOOK_AUTH_URL,
+  GITHUB_AUTH_URL,
+  GOOGLE_AUTH_URL,
+} from '../constants';
 
 export function Login() {
   return (
@@ -18,7 +23,7 @@ export function Login() {
         <div className="flex flex-col gap-4">
           <a
             className="flex justify-start items-center gap-1 h-10 bg-slate-50 dark:bg-slate-200 rounded-[4px] overflow-hidden opacity-75 hover:opacity-100 transition-opacity duration-200"
-            href={'/'}
+            href={FACEBOOK_AUTH_URL}
           >
             <div className="bg-slate-50 dark:bg-slate-100">
               <img className="w-8 h-8 ml-1" src={facebookLogo} alt="Facebook" />
@@ -31,7 +36,7 @@ export function Login() {
           </a>
           <a
             className="flex justify-start items-center gap-1 h-10 bg-slate-50 dark:bg-slate-200 rounded-[4px] overflow-hidden opacity-75 hover:opacity-100 transition-opacity duration-200"
-            href={'/'}
+            href={GITHUB_AUTH_URL}
           >
             <div className="bg-slate-50 dark:bg-slate-100">
               <img className="w-8 h-8 ml-1" src={githubLogo} alt="Facebook" />
@@ -42,7 +47,7 @@ export function Login() {
           </a>
           <a
             className="flex justify-start items-center gap-1 h-10 bg-slate-50 dark:bg-slate-200 rounded-[4px] overflow-hidden opacity-75 hover:opacity-100 transition-opacity duration-200"
-            href={'/'}
+            href={GOOGLE_AUTH_URL}
           >
             <div className="bg-slate-50 dark:bg-slate-100">
               <img className="w-8 h-8 ml-1" src={googleLogo} alt="Facebook" />
