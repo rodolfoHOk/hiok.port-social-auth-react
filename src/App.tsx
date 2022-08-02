@@ -7,7 +7,7 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <main>
+      <main className="min-h-[calc(100vh_-_64px_-_32px)] min-w-full bg-gray-50 dark:bg-neutral-900">
         <Router />
       </main>
       <Footer />

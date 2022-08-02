@@ -4,7 +4,7 @@ export function Header() {
   const isAuthenticated = true;
 
   return (
-    <header className="relative h-16 z-10 flex items-center justify-between bg-zinc-100 dark:bg-zinc-900">
+    <header className="relative h-16 z-10 flex items-center justify-between bg-slate-200 dark:bg-zinc-800">
       <div className="ml-4">
         <Link className="font-bold text-xl text-blue-500" to={'/'}>
           Login Social
@@ -16,14 +16,14 @@ export function Header() {
             <ul className="flex gap-4">
               <li>
                 <Link
-                  className="text-lg text-zinc-800 dark:text-zinc-200 hover:text-blue-500"
+                  className="text-lg text-zinc-700 dark:text-zinc-300 hover:text-blue-500"
                   to={'/profile'}
                 >
                   Profile
                 </Link>
               </li>
               <li>
-                <a className="text-lg text-zinc-800 dark:text-zinc-200 hover:text-blue-500">
+                <a className="text-lg text-zinc-700 dark:text-zinc-300 hover:text-blue-500">
                   Logout
                 </a>
               </li>
@@ -32,7 +32,7 @@ export function Header() {
             <ul className="flex gap-4">
               <li>
                 <Link
-                  className="text-lg text-zinc-800 dark:text-zinc-200 hover:text-blue-500"
+                  className="text-lg text-zinc-700 dark:text-zinc-300 hover:text-blue-500"
                   to={'/login'}
                 >
                   Login
