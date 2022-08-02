@@ -11,8 +11,8 @@ export function Login() {
       </div>
       <div className="flex flex-col items-center justify-center gap-6 w-1/2 bg-violet-400 dark:bg-purple-900">
         <div className="flex">
-          <h2 className="font-Capriola text-zinc-800 dark:text-zinc-300">
-            Logar no Portfolio de HiOk-Dev
+          <h2 className="font-Capriola text-zinc-900 dark:text-zinc-300">
+            Logar no Portfólio de HiOk Dev
           </h2>
         </div>
         <div className="flex flex-col gap-4">
