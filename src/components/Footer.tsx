@@ -5,12 +5,12 @@ export function Footer() {
         <span>Login Social</span>
         <div className="relative pl-3">
           <span className="before:content-none[''] before:w-1 before:h-1 before:rounded-sm before:bg-zinc-400 before:dark:bg-zinc-800 before:absolute before:left-0 before:top-1/2 before:-translate-x-1/2 before:-translate-y-1/2">
-            Todos os direitos reservados
+            2022
           </span>
         </div>
         <div className="relative pl-3">
           <span className="before:content-none[''] before:w-1 before:h-1 before:rounded-sm before:bg-zinc-400 before:dark:bg-zinc-800 before:absolute before:left-0 before:top-1/2 before:-translate-x-1/2 before:-translate-y-1/2">
-            2022
+            HiOk Dev
           </span>
         </div>
       </div>

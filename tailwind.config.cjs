@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.tsx"],
+  content: ['./src/**/*.tsx'],
   theme: {
     extend: {
-      fontFamily: { Lato: ["Lato"] },
+      fontFamily: { Lato: ['Lato'], Capriola: ['Capriola'] },
     },
   },
   plugins: [],

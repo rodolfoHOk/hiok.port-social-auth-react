@@ -6,7 +6,10 @@ export function Header() {
   return (
     <header className="relative h-16 z-10 flex items-center justify-between bg-slate-200 dark:bg-zinc-800">
       <div className="ml-4">
-        <Link className="font-bold text-xl text-blue-500" to={'/'}>
+        <Link
+          className="font-bold font-Capriola text-xl text-blue-500"
+          to={'/'}
+        >
           Login Social
         </Link>
       </div>
