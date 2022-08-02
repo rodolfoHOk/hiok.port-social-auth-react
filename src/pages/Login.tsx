@@ -2,13 +2,11 @@ import { Home } from './Home';
 import facebookLogo from '../assets/images/facebook-logo.png';
 import githubLogo from '../assets/images/github-logo.png';
 import googleLogo from '../assets/images/google-logo.png';
-import {
-  FACEBOOK_AUTH_URL,
-  GITHUB_AUTH_URL,
-  GOOGLE_AUTH_URL,
-} from '../constants';
+import { Provider, useAuth } from '../context/AuthenticationContext';
 
 export function Login() {
+  const { isLoggingIn, login } = useAuth();
+
   return (
     <div className="flex">
       <div className="flex w-1/2">
@@ -21,9 +19,10 @@ export function Login() {
           </h2>
         </div>
         <div className="flex flex-col gap-4">
-          <a
-            className="flex justify-start items-center gap-1 h-10 bg-slate-50 dark:bg-slate-200 rounded-[4px] overflow-hidden opacity-75 hover:opacity-100 transition-opacity duration-200"
-            href={FACEBOOK_AUTH_URL}
+          <button
+            className="flex justify-start items-center gap-1 h-10 bg-slate-50 dark:bg-slate-200 rounded-[4px] overflow-hidden opacity-75 hover:opacity-100 transition-opacity duration-200 disabled:opacity-75"
+            onClick={() => login(Provider.facebook)}
+            disabled={isLoggingIn}
           >
             <div className="bg-slate-50 dark:bg-slate-100">
               <img className="w-8 h-8 ml-1" src={facebookLogo} alt="Facebook" />
@@ -33,10 +32,11 @@ export function Login() {
                 Logar com Facebook
               </span>
             </div>
-          </a>
-          <a
-            className="flex justify-start items-center gap-1 h-10 bg-slate-50 dark:bg-slate-200 rounded-[4px] overflow-hidden opacity-75 hover:opacity-100 transition-opacity duration-200"
-            href={GITHUB_AUTH_URL}
+          </button>
+          <button
+            className="flex justify-start items-center gap-1 h-10 bg-slate-50 dark:bg-slate-200 rounded-[4px] overflow-hidden opacity-75 hover:opacity-100 transition-opacity duration-200 disabled:opacity-75"
+            onClick={() => login(Provider.github)}
+            disabled={isLoggingIn}
           >
             <div className="bg-slate-50 dark:bg-slate-100">
               <img className="w-8 h-8 ml-1" src={githubLogo} alt="Facebook" />
@@ -44,10 +44,11 @@ export function Login() {
             <div className="flex items-center h-10 w-48 px-3 bg-neutral-800">
               <span className="font-bold text-zinc-100">Logar com Github</span>
             </div>
-          </a>
-          <a
-            className="flex justify-start items-center gap-1 h-10 bg-slate-50 dark:bg-slate-200 rounded-[4px] overflow-hidden opacity-75 hover:opacity-100 transition-opacity duration-200"
-            href={GOOGLE_AUTH_URL}
+          </button>
+          <button
+            className="flex justify-start items-center gap-1 h-10 bg-slate-50 dark:bg-slate-200 rounded-[4px] overflow-hidden opacity-75 hover:opacity-100 transition-opacity duration-200 disabled:opacity-75"
+            onClick={() => login(Provider.google)}
+            disabled={isLoggingIn}
           >
             <div className="bg-slate-50 dark:bg-slate-100">
               <img className="w-8 h-8 ml-1" src={googleLogo} alt="Facebook" />
@@ -55,7 +56,7 @@ export function Login() {
             <div className="flex items-center h-10 w-48 px-3 bg-red-800">
               <span className="font-bold text-zinc-100">Logar com Google</span>
             </div>
-          </a>
+          </button>
         </div>
       </div>
     </div>

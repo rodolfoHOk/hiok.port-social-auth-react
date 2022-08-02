@@ -14,6 +14,8 @@
 
 ### 📚 Bibliotecas adicionais 🗃️
 
+- axios : Promise based HTTP client for Node.js
+
 ## 📃 Guias 📖
 
 [ViteJs](vite.md)

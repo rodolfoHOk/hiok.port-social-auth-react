@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthenticationContext';
 
 export function Header() {
-  const isAuthenticated = true;
+  const { user } = useAuth();
+  let isAuthenticated = user ? true : false;
 
   return (
     <header className="relative h-16 z-10 flex items-center justify-between bg-slate-200 dark:bg-zinc-800">

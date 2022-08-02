@@ -1,9 +1,15 @@
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthenticationContext';
 import { Home } from './Home';
 
 export function Profile() {
-  const imageUrl = 'https://avatars.githubusercontent.com/u/57463848?v=4';
-  const name = 'Rudolf HiOk';
-  const email = 'rudolf.test@email.com';
+  const navigate = useNavigate();
+  const { user } = useAuth();
+
+  if (!user) {
+    navigate('/');
+    return;
+  }
 
   return (
     <div className="flex ">
@@ -17,23 +23,23 @@ export function Profile() {
           </h2>
         </div>
         <div className="flex">
-          {imageUrl ? (
+          {user.imageUrl ? (
             <img
               className="max-w-[250px] rounded-full"
-              src={imageUrl}
-              alt={name}
+              src={user.imageUrl}
+              alt={user.name}
             />
           ) : (
             <div className="flex justify-center items-center rounded-full w-52 h-52 bg-gradient-to-br from-violet-400 to-purple-900">
               <span className="text-zinc-300 dark:text-zinc-300 text-4xl text-center overflow-hidden">
-                {name}
+                {user.name}
               </span>
             </div>
           )}
         </div>
         <div className="flex flex-col items-center text-zinc-900 dark:text-zinc-300">
-          <h2 className="font-bold text-lg">{name}</h2>
-          <p className="text-md">{email}</p>
+          <h2 className="font-bold text-lg">{user.name}</h2>
+          <p className="text-md">{user.email}</p>
         </div>
       </div>
     </div>
