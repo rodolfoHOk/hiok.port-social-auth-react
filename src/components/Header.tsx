@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthenticationContext';
 
 export function Header() {
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
   let isAuthenticated = user ? true : false;
 
   return (
@@ -28,7 +28,10 @@ export function Header() {
                 </Link>
               </li>
               <li>
-                <a className="text-lg text-zinc-700 dark:text-zinc-300 hover:text-purple-600 hover:dark:text-purple-500 transition-colors duration-200">
+                <a
+                  className="text-lg text-zinc-700 dark:text-zinc-300 hover:text-purple-600 hover:dark:text-purple-500 transition-colors duration-200"
+                  onClick={logout}
+                >
                   Logout
                 </a>
               </li>
