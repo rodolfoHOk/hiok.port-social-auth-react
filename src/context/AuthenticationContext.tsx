@@ -70,7 +70,7 @@ export function AuthenticationProvider({
 
   function logout() {
     localStorage.removeItem('@portfolio:token');
-    api.defaults.headers.common.authorization = '';
+    api.defaults.headers.common.Authorization = '';
     setUser(null);
   }
 
@@ -93,7 +93,7 @@ export function AuthenticationProvider({
   useEffect(() => {
     const token = localStorage.getItem('@portfolio:token');
     if (token) {
-      api.defaults.headers.common.authorization = `Bearer ${token}`;
+      api.defaults.headers.common.Authorization = `Bearer ${token}`;
       getUserInfos();
     }
   }, []);
@@ -104,7 +104,7 @@ export function AuthenticationProvider({
       const token = new URLSearchParams(window.location.search).get('token');
       if (token) {
         localStorage.setItem('@portfolio:token', token);
-        api.defaults.headers.common.authorization = `Bearer ${token}`;
+        api.defaults.headers.common.Authorization = `Bearer ${token}`;
         getUserInfos();
       }
     } else if (url.includes('/oauth2/redirect?error=')) {

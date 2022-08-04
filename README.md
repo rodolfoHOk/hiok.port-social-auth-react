@@ -32,4 +32,14 @@
 
 ## 🚀 Deploy 🔥
 
-## 🔥 Repositórios do Portfolio
+## 🔥 Repositórios Relacionados 🫶
+
+- [Portfolio Social Login Server - Java Spring](https://github.com/rodolfoHOk/hiok.port-social-auth-server)
+
+- [Portfolio Social Login FrontEnd - React](https://github.com/rodolfoHOk/hiok.port-social-auth-react) (este repositório)
+
+- [Portfolio Resource Server - Java Spring](https://github.com/rodolfoHOk/hiok.port-resource-server)
+
+## Próximos passos
+
+- Exibir notificações (alertas)
