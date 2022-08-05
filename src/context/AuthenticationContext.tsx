@@ -6,6 +6,8 @@ import {
   useState,
 } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useToast } from '../components/Toast';
+import { ToastInfos } from '../components/Toast/ToastContainer';
 import {
   API_BASE_URL,
   FACEBOOK_AUTH_URL,
@@ -14,6 +16,7 @@ import {
   OAUTH2_REDIRECT_URI,
 } from '../constants';
 import { api } from '../lib/api';
+import { v4 as uuidV4 } from 'uuid';
 
 export enum Provider {
   'facebook',
@@ -45,6 +48,7 @@ export function AuthenticationProvider({
   children,
 }: AuthenticationProviderProps) {
   const navigate = useNavigate();
+  const toast = useToast();
 
   const [user, setUser] = useState<User | null>(null);
   const [isLoggingIn, setIsLoggingIn] = useState<boolean>(false);
@@ -84,7 +88,14 @@ export function AuthenticationProvider({
         navigate('/profile');
       })
       .catch((err) => {
-        console.error('Erro ao tentar autenticar: ', err.response.data);
+        const toastInfo: ToastInfos = {
+          id: uuidV4(),
+          type: 'danger',
+          title: 'Erro ao tentar autenticar',
+          message: err.response.data,
+          duration: 4000,
+        };
+        toast.notify(toastInfo);
         navigate('/login');
       })
       .finally(() => setIsLoggingIn(false));
@@ -109,7 +120,14 @@ export function AuthenticationProvider({
       }
     } else if (url.includes('/oauth2/redirect?error=')) {
       const error = new URLSearchParams(window.location.search).get('error');
-      console.error('Erro ao tentar autenticar: ', error);
+      const toastInfo: ToastInfos = {
+        id: uuidV4(),
+        type: 'danger',
+        title: 'Erro ao tentar autenticar',
+        message: error ? error : '',
+        duration: 4000,
+      };
+      toast.notify(toastInfo);
       navigate('/login');
     }
   }, []);

@@ -32,6 +32,10 @@
 
 [Tailwind CSS](https://tailwindcss.com/)
 
+[React Hooks](https://pt-br.reactjs.org/docs/hooks-reference.html)
+
+[React Portals](https://pt-br.reactjs.org/docs/portals.html)
+
 ## 🚀 Deploy 🔥
 
 ## 🔥 Repositórios Relacionados 🫶
@@ -44,4 +48,4 @@
 
 ## Próximos passos
 
-- Exibir notificações (alertas)
+- Add animation in toast component
