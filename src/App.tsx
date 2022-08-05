@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <AuthenticationProvider>
         <Header />
-        <main className="min-h-[calc(100vh_-_64px_-_32px)] min-w-full bg-gray-50 dark:bg-neutral-900">
+        <main className="min-h-[calc(100vh_-_56px_-_32px)] min-w-full bg-gray-50 dark:bg-neutral-900">
           <Router />
         </main>
         <Footer />

@@ -15,6 +15,8 @@
 ### 📚 Bibliotecas adicionais 🗃️
 
 - axios : Promise based HTTP client for Node.js
+- phosphor-react : Flexible icon family for ReactJs
+- uuid : For the creation of RFC4122 UUIDs
 
 ## 📃 Guias 📖
 

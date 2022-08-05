@@ -6,7 +6,7 @@ export function Header() {
   let isAuthenticated = user ? true : false;
 
   return (
-    <header className="relative h-16 z-10 flex items-center justify-between bg-slate-200 dark:bg-zinc-800">
+    <header className="relative h-14 z-10 flex items-center justify-between bg-slate-200 dark:bg-zinc-800">
       <div className="ml-4">
         <Link
           className="font-bold font-Capriola text-xl text-purple-600 dark:text-purple-500"
