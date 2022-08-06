@@ -1,3 +1,9 @@
+import {
+  IdentificationCard,
+  SignIn,
+  SignOut,
+  UserCircle,
+} from 'phosphor-react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthenticationContext';
 
@@ -15,24 +21,27 @@ export function Header() {
           Login Social
         </Link>
       </div>
+
       <div className="mr-4">
         <nav>
           {isAuthenticated ? (
             <ul className="flex gap-4">
               <li>
                 <Link
-                  className="text-lg text-zinc-700 dark:text-zinc-300 hover:text-purple-600 hover:dark:text-purple-500 transition-colors duration-200"
+                  className="flex items-center gap-1 h-14 p-2 text-lg text-zinc-700 dark:text-zinc-300 hover:text-zinc-100 hover:bg-purple-500 dark:hover:bg-purple-600 transition-colors duration-200"
                   to={'/profile'}
                 >
-                  Profile
+                  <IdentificationCard size={24} weight="regular" />
+                  <span>Profile</span>
                 </Link>
               </li>
               <li>
                 <a
-                  className="text-lg text-zinc-700 dark:text-zinc-300 hover:text-purple-600 hover:dark:text-purple-500 transition-colors duration-200"
+                  className="flex items-center gap-1 h-14 p-2 text-lg text-zinc-700 dark:text-zinc-300 hover:text-zinc-100 hover:bg-purple-500 dark:hover:bg-purple-600 transition-colors duration-200"
                   onClick={logout}
                 >
-                  Logout
+                  <SignOut size={24} weight="regular" />
+                  <span>Logout</span>
                 </a>
               </li>
             </ul>
@@ -40,10 +49,11 @@ export function Header() {
             <ul className="flex gap-4">
               <li>
                 <Link
-                  className="text-lg text-zinc-700 dark:text-zinc-300 hover:text-blue-500 hover:dark:text-purple-500 transition-colors duration-200"
+                  className="flex items-center gap-1 h-14 p-2 text-lg text-zinc-700 dark:text-zinc-300 hover:text-zinc-100 hover:bg-purple-500 dark:hover:bg-purple-600 transition-colors duration-200"
                   to={'/login'}
                 >
-                  Login
+                  <SignIn size={24} weight="regular" />
+                  <span>Login</span>
                 </Link>
               </li>
             </ul>

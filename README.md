@@ -47,3 +47,10 @@
 - [Portfolio Social Login FrontEnd - React](https://github.com/rodolfoHOk/hiok.port-social-auth-react) (este repositório)
 
 - [Portfolio Resource Server - Java Spring](https://github.com/rodolfoHOk/hiok.port-resource-server)
+
+## Próximos passos
+
+- Add logo image in header component
+- Add styles in profile button
+- Add socials in footer
+- Mobile Screen Responsive
