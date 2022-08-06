@@ -120,11 +120,21 @@ export function AuthenticationProvider({
       }
     } else if (url.includes('/oauth2/redirect?error=')) {
       const error = new URLSearchParams(window.location.search).get('error');
+      let message = '';
+      if (error) {
+        if (error.includes('github')) {
+          message = 'Por favor use sua conta do Github para logar';
+        } else if (error.includes('facebook')) {
+          message = 'Por favor use sua conta do Facebook para logar';
+        } else if (error.includes('google')) {
+          message = 'Por favor use sua conta do Google para logar';
+        }
+      }
       const toastInfo: ToastInfos = {
         id: uuidV4(),
         type: 'danger',
         title: 'Erro ao tentar autenticar',
-        message: error ? error : '',
+        message: message,
         duration: 4000,
       };
       toast.notify(toastInfo);
