@@ -22,7 +22,7 @@ export function Profile() {
         <div className="flex flex-col justify-center items-center gap-4 w-1/2">
           <div className="flex mb-4">
             <h2 className="font-Capriola text-2xl text-zinc-900 dark:text-zinc-300">
-              Profile
+              Perfil
             </h2>
           </div>
           <div className="flex">

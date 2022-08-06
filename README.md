@@ -51,6 +51,6 @@
 ## Próximos passos
 
 - Add logo image in header component
-- Add styles in profile button
+- Add logged user image in header
 - Add socials in footer
 - Mobile Screen Responsive

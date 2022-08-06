@@ -32,7 +32,7 @@ export function Login() {
                 <SpinnerGap
                   size={32}
                   weight="bold"
-                  className="ml-1 text-violet-600 animate-spin"
+                  className="ml-1 text-purple-600 animate-spin"
                 />
               ) : (
                 <img
@@ -60,7 +60,7 @@ export function Login() {
                 <SpinnerGap
                   size={32}
                   weight="bold"
-                  className="ml-1 text-violet-600 animate-spin"
+                  className="ml-1 text-purple-600 animate-spin"
                 />
               ) : (
                 <img className="w-8 h-8 ml-1" src={githubLogo} alt="Github" />
@@ -82,7 +82,7 @@ export function Login() {
                 <SpinnerGap
                   size={32}
                   weight="bold"
-                  className="ml-1 text-violet-600 animate-spin"
+                  className="ml-1 text-purple-600 animate-spin"
                 />
               ) : (
                 <img className="w-8 h-8 ml-1" src={googleLogo} alt="Google" />
