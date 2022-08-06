@@ -48,7 +48,7 @@ export function ToastProvider({ children, position }: ToastProviderProps) {
               : position === 'top-left'
               ? 'top-16 left-4'
               : position === 'top-center'
-              ? 'top-16 left-auto right-auto'
+              ? 'top-16 left-[calc(50vw_-_150px)]'
               : position === 'bottom-right'
               ? 'bottom-12 right-4'
               : position === 'bottom-left'
@@ -60,6 +60,7 @@ export function ToastProvider({ children, position }: ToastProviderProps) {
             <ToastContainer
               key={toast.id}
               toastInfos={toast}
+              position={position}
               onClose={deleteToast}
             />
           ))}

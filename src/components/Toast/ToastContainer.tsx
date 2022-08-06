@@ -11,10 +11,21 @@ export interface ToastInfos {
 
 interface ToastContainerProps {
   toastInfos: ToastInfos;
+  position:
+    | 'top-right'
+    | 'top-left'
+    | 'bottom-right'
+    | 'bottom-left'
+    | 'top-center'
+    | 'bottom-center';
   onClose: (id: string) => void;
 }
 
-export function ToastContainer({ toastInfos, onClose }: ToastContainerProps) {
+export function ToastContainer({
+  toastInfos,
+  position,
+  onClose,
+}: ToastContainerProps) {
   const { id, type, title, message, duration } = toastInfos;
 
   useEffect(() => {
@@ -39,6 +50,18 @@ export function ToastContainer({ toastInfos, onClose }: ToastContainerProps) {
           : type === 'info'
           ? 'bg-blue-600'
           : 'bg-orange-500'
+      } ${
+        position === 'top-right'
+          ? 'animate-toastInRight'
+          : position === 'top-left'
+          ? 'animate-toastInLeft'
+          : position === 'top-center'
+          ? 'animate-toastInTop'
+          : position === 'bottom-right'
+          ? 'animate-toastInRight'
+          : position === 'bottom-left'
+          ? 'animate-toastInLeft'
+          : 'animate-toastInBottom'
       }`}
     >
       <button
