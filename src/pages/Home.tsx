@@ -1,6 +1,6 @@
 export function Home() {
   return (
-    <div className="relative flex flex-col w-full min-h-[calc(100vh_-_64px_-_32px)] justify-center gap-8">
+    <div className="relative flex flex-col w-full min-h-[calc(100vh_-_56px_-_32px)] justify-center gap-8">
       <div className="flex flex-col gap-2 px-8">
         <h2 className="font-Capriola font-bold text-2xl text-zinc-800 dark:text-zinc-200">
           OAuth2 Social Login
