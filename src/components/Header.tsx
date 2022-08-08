@@ -1,6 +1,7 @@
 import { House, IdentificationCard, SignIn, SignOut } from 'phosphor-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthenticationContext';
+import { LogoCompose } from './LogoCompose';
 
 export function Header() {
   const location = useLocation();
@@ -13,12 +14,9 @@ export function Header() {
 
   return (
     <header className="relative h-14 z-10 flex items-center justify-between bg-slate-200 dark:bg-zinc-800">
-      <div className="ml-4">
-        <Link
-          className="font-bold font-Capriola text-xl text-purple-600 dark:text-purple-500"
-          to={'/'}
-        >
-          Login Social
+      <div className="flex items-center ml-4">
+        <Link to={'/'}>
+          <LogoCompose />
         </Link>
       </div>
 
