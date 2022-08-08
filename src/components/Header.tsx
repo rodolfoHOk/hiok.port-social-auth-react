@@ -1,7 +1,8 @@
-import { House, IdentificationCard, SignIn, SignOut } from 'phosphor-react';
+import { House, IdentificationCard, SignIn } from 'phosphor-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthenticationContext';
 import { LogoCompose } from './LogoCompose';
+import { LoggedUserButton } from './LoggedUserButton';
 
 export function Header() {
   const location = useLocation();
@@ -9,7 +10,7 @@ export function Header() {
   const isLoginPage = location.pathname === '/login';
   const isProfilePage = location.pathname === '/profile';
 
-  const { user, logout } = useAuth();
+  const { user } = useAuth();
   let isAuthenticated = user ? true : false;
 
   return (
@@ -54,13 +55,7 @@ export function Header() {
                 </li>
 
                 <li>
-                  <a
-                    className="flex items-center gap-1 h-14 p-2 text-lg text-zinc-700 dark:text-zinc-300 hover:text-zinc-100 hover:bg-purple-500 dark:hover:bg-purple-600 transition-colors duration-200"
-                    onClick={logout}
-                  >
-                    <SignOut size={24} weight="regular" />
-                    <span>Sair</span>
-                  </a>
+                  <LoggedUserButton />
                 </li>
               </>
             ) : (

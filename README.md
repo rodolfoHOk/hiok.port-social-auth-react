@@ -17,6 +17,7 @@
 - axios : Promise based HTTP client for Node.js
 - phosphor-react : Flexible icon family for ReactJs
 - uuid : For the creation of RFC4122 UUIDs
+- @headlessui/react : A set of completely unstyled, fully accessible UI components
 
 ## 📃 Guias 📖
 
@@ -50,6 +51,5 @@
 
 ## Próximos passos
 
-- Add logged user image in header
 - Add socials in footer
 - Mobile Screen Responsive

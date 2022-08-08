@@ -5,7 +5,7 @@ import {
   useEffect,
   useState,
 } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useToast } from '../components/Toast';
 import { ToastInfos } from '../components/Toast/ToastContainer';
 import {
@@ -47,6 +47,7 @@ interface AuthenticationProviderProps {
 export function AuthenticationProvider({
   children,
 }: AuthenticationProviderProps) {
+  const { pathname } = useLocation();
   const navigate = useNavigate();
   const toast = useToast();
 
@@ -85,7 +86,17 @@ export function AuthenticationProvider({
       .get<User>('/user/me')
       .then((response) => {
         setUser(response.data);
-        navigate('/profile');
+        if (pathname === '/login' || pathname === '/oauth2/redirect') {
+          const toastInfo: ToastInfos = {
+            id: uuidV4(),
+            type: 'success',
+            title: 'Sucesso',
+            message: 'Login realizado com sucesso',
+            duration: 3000,
+          };
+          toast.notify(toastInfo);
+          navigate('/');
+        }
       })
       .catch((err) => {
         const toastInfo: ToastInfos = {
