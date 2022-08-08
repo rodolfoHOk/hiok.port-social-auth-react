@@ -51,5 +51,4 @@
 
 ## Próximos passos
 
-- Add socials in footer
 - Mobile Screen Responsive
