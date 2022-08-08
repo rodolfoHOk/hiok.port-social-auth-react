@@ -4,17 +4,18 @@ import githubLogo from '../assets/images/github-logo.png';
 import googleLogo from '../assets/images/google-logo.png';
 import { Provider, useAuth } from '../context/AuthenticationContext';
 import { SpinnerGap } from 'phosphor-react';
+import { LeftSide } from './LeftSide';
 
 export function Login() {
   const { isLoggingIn, login } = useAuth();
 
   return (
-    <div className="flex">
-      <div className="flex w-1/2">
-        <Home />
+    <div className="flex flex-col justify-around min-h-[calc(100vh_-_56px_-_32px)] md:flex-row md:justify-center">
+      <div className="flex w-full items-center justify-center md:w-1/2 md:justify-start">
+        <LeftSide />
       </div>
 
-      <div className="flex flex-col items-center justify-center gap-6 w-1/2 bg-violet-400 dark:bg-purple-900">
+      <div className="flex flex-col items-center justify-center py-6 gap-6 md:w-1/2 bg-violet-400 dark:bg-purple-900">
         <div className="flex">
           <h2 className="font-Capriola text-zinc-900 dark:text-zinc-300">
             Logar no Portfólio de HiOk Dev

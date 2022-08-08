@@ -7,7 +7,7 @@ export function NotFound404() {
         <img className="w-[400px]" src={NotFoundImage} alt="Image Not Found" />
       </div>
       <div>
-        <span className="font-bold font-Capriola text-2xl uppercase text-zinc-700 dark:text-zinc-400">
+        <span className="font-bold font-Capriola text-xl sm:text-2xl text-center uppercase text-zinc-700 dark:text-zinc-400">
           Página não encontrada
         </span>
       </div>

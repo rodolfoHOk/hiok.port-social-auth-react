@@ -37,7 +37,7 @@
 
 [React Portals](https://pt-br.reactjs.org/docs/portals.html)
 
-[StorySet](https://storyset.com/) - Not found image
+[StorySet](https://storyset.com/)
 
 ## 🚀 Deploy 🔥
 
