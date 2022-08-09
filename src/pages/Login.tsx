@@ -11,11 +11,11 @@ export function Login() {
 
   return (
     <div className="flex flex-col justify-around min-h-[calc(100vh_-_56px_-_32px)] md:flex-row md:justify-center">
-      <div className="flex w-full items-center justify-center md:w-1/2 md:justify-start">
+      <div className="flex w-full items-center justify-center pt-12 md:pt-0 md:w-1/2 md:justify-start">
         <LeftSide />
       </div>
 
-      <div className="flex flex-col items-center justify-center py-6 gap-6 md:w-1/2 bg-violet-400 dark:bg-purple-900">
+      <div className="flex flex-col items-center justify-center py-12 gap-6 md:w-1/2 bg-violet-400 dark:bg-purple-900">
         <div className="flex">
           <h2 className="font-Capriola text-zinc-900 dark:text-zinc-300">
             Logar no Portfólio de HiOk Dev

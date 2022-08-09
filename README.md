@@ -48,7 +48,3 @@
 - [Portfolio Social Login FrontEnd - React](https://github.com/rodolfoHOk/hiok.port-social-auth-react) (este repositório)
 
 - [Portfolio Resource Server - Java Spring](https://github.com/rodolfoHOk/hiok.port-resource-server)
-
-## Próximos passos
-
-- Mobile Screen Responsive

@@ -25,9 +25,10 @@ export function LogoCompose() {
         </div>
       </div>
 
-      <span className="font-bold font-Capriola text-xl text-purple-600 dark:text-purple-500 translate-x-[-25px]">
-        Login Social
-      </span>
+      <div className="flex flex-col font-bold font-Capriola text-lg leading-5 text-purple-600 dark:text-purple-500 translate-x-[-25px]">
+        <span>Login</span>
+        <span className="ml-4">Social</span>
+      </div>
     </div>
   );
 }

@@ -16,13 +16,13 @@ export function Profile() {
 
   return (
     <div className="flex flex-col justify-around min-h-[calc(100vh_-_56px_-_32px)] md:flex-row md:justify-center">
-      <div className="flex w-full items-center justify-center my-6 md:w-1/2 md:justify-start">
+      <div className="flex w-full items-center justify-center pt-12 md:pt-0 md:w-1/2 md:justify-start">
         <LeftSide />
       </div>
       {user && (
         <div className="flex w-full justify-center items-center md:w-1/2">
           <div className="flex flex-col justify-center items-center gap-4">
-            <div className="flex mb-4">
+            <div className="flex mb-2">
               <h2 className="font-Capriola text-2xl text-zinc-900 dark:text-zinc-300">
                 Perfil
               </h2>
