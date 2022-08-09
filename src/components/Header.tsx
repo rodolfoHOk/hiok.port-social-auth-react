@@ -1,9 +1,9 @@
 import { useAuth } from '../context/AuthenticationContext';
 import { LogoCompose } from './LogoCompose';
-import { LoggedUserButton } from './LoggedUserButton';
+import { LoggedUser } from './LoggedUser';
 import { Hamburger } from './Hamburger';
-import { Fragment, useState } from 'react';
-import { Disclosure, Transition } from '@headlessui/react';
+import { useState } from 'react';
+import { Disclosure } from '@headlessui/react';
 import { NavBar } from './NavBar';
 import { Link } from 'react-router-dom';
 
@@ -43,7 +43,7 @@ export function Header() {
           <NavBar />
         </div>
 
-        {isAuthenticated && <LoggedUserButton />}
+        {isAuthenticated && <LoggedUser />}
       </div>
     </header>
   );

@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthenticationContext';
-import { Home } from './Home';
 import { LeftSide } from './LeftSide';
 
 export function Profile() {

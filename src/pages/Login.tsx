@@ -1,4 +1,3 @@
-import { Home } from './Home';
 import facebookLogo from '../assets/images/facebook-logo.png';
 import githubLogo from '../assets/images/github-logo.png';
 import googleLogo from '../assets/images/google-logo.png';

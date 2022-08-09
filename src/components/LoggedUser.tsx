@@ -4,7 +4,7 @@ import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthenticationContext';
 
-export function LoggedUserButton() {
+export function LoggedUser() {
   const { user, logout } = useAuth();
 
   return (
