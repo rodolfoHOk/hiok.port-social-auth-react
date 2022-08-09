@@ -5,7 +5,7 @@ interface HamburgerProps {
 
 export function Hamburger({ open, setOpen }: HamburgerProps) {
   return (
-    <button
+    <a
       className="absolute top-2 left-4 flex flex-col items-center justify-around py-[3px] w-10 h-10 z-20 bg-transparent rounded-md focus:outline-none"
       onClick={() => setOpen(!open)}
     >
@@ -24,6 +24,6 @@ export function Hamburger({ open, setOpen }: HamburgerProps) {
           open ? '-rotate-45 translate-x-[5px]' : 'rotate-0'
         }`}
       />
-    </button>
+    </a>
   );
 }
