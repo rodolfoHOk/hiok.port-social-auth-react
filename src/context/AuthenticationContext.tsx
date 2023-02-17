@@ -9,7 +9,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useToast } from '../components/Toast';
 import { ToastInfos } from '../components/Toast/ToastContainer';
 import {
-  API_BASE_URL,
   FACEBOOK_AUTH_URL,
   GITHUB_AUTH_URL,
   GOOGLE_AUTH_URL,
@@ -69,7 +68,16 @@ export function AuthenticationProvider({
       default:
         throw new Error('Provider not informed');
     }
-    const loginUrl = `${API_BASE_URL}${providerUrl}?redirect_uri=${OAUTH2_REDIRECT_URI}`;
+
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+    const redirectUri = `${
+      import.meta.env.VITE_APP_BASE_URL
+    }${OAUTH2_REDIRECT_URI}`;
+
+    const queryParams = new URLSearchParams();
+    queryParams.set('redirect_uri', redirectUri);
+
+    const loginUrl = `${apiBaseUrl}${providerUrl}?${queryParams.toString()}`;
     window.location.href = loginUrl;
   }
 
